@@ -26,6 +26,10 @@ ul {
 }
 .head {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  position: relative;
+  color: #404bbf;
 }
 .head-section {
   display: flex;
@@ -38,7 +42,7 @@ ul {
   display: flex;
   gap: 40px;
 }
-.nav-list {
+.nav-item {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -46,14 +50,33 @@ ul {
   padding: 24px 0;
   color: var(--dark_gray);
 }
-.nav-list:focus {
+.nav-item:focus {
   color: #404bbf;
 }
-.nav-list:hover {
+.nav-item:hover {
   color: #404bbf;
+}
+.nav-item::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #404bbf;
+  bottom: -1px;
+  height: 4px;
+  border-radius: 2px;
+  content: '';
 }
 .sect-first {
   padding: 188px 0;
+  max-width: 1440px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/ofiice.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: var(--dark_gray);
 }
 .sect-second {
@@ -197,6 +220,7 @@ ul {
   min-width: 169px;
   height: 56px;
   margin-left: 466px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover {
   background-color: #404bbf;
@@ -254,6 +278,15 @@ ul {
   width: 1158px;
   padding: 0 15px;
 }
+.sect-second-icons {
+  display: flex;
+  height: 112px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cloud);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
 
 .head-studio {
   color: var(--dark_gray);
@@ -274,6 +307,8 @@ ul {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--gray);
 }
 .visually-hidden {
