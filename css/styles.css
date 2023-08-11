@@ -50,6 +50,9 @@ p {
 .navigation-list {
   display: flex;
   gap: 40px;
+  position: relative;
+  color: #404bbf;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-item {
   font-weight: 500;
@@ -73,7 +76,7 @@ p {
   bottom: -1px;
   height: 4px;
   border-radius: 2px;
-  content: '';
+  content: '-';
 }
 .sect-first {
   padding: 188px 0;
@@ -83,7 +86,7 @@ p {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/ofiice.jpg);
+    url(../images/ofiice.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -388,7 +391,6 @@ p {
 .social-item {
   width: 40px;
   height: 40px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link {
   width: 100%;
@@ -398,6 +400,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus {
@@ -444,10 +447,12 @@ p {
   max-width: 264px;
   color: var(--cloud);
 }
+.foo-container {
+  margin-right: 120px;
+}
 .media-container {
   display: flex;
   align-items: baseline;
-  margin-right: 120px;
 }
 .media-paragraph {
   line-height: 1.5;
